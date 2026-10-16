@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 120"
+     width="500" height="120" role="img" aria-labelledby="t d">
+<title id="t">GAIA — Geração de derivados e Análise Inteligente de Ativos Amazônicos</title>
+<desc id="d">Símbolo hexagonal com o encontro das águas, seguido do nome GAIA e da
+expansão da sigla.</desc>
+
+<!--
+  ASSINATURA COMPLETA
+  ===================
+  Símbolo + nome + expansão da sigla, na proporção travada.
+
+  As quatro iniciais da sigla aparecem destacadas em azul de metileno
+  dentro da linha de apoio. É o que dispensa explicar o nome: quem lê a
+  assinatura uma vez entende de onde vêm as letras.
+
+  A tipografia é a pilha do sistema, a mesma da interface. Nenhuma fonte
+  é baixada — coerente com o resto do projeto, que funciona offline.
+  Para material impresso onde a fonte precise ser garantida, converta os
+  textos em contornos antes de enviar à gráfica.
+
+  Área de respiro mínima em volta: metade da altura do símbolo.
+  Tamanho mínimo de uso: 120 px de largura. Abaixo disso, use só o
+  símbolo (gaia-simbolo.svg).
+-->
+
+<defs>
+  <linearGradient id="negro" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#2A5F9E"/>
+    <stop offset="1" stop-color="#143C6B"/>
+  </linearGradient>
+  <linearGradient id="solimoes" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#C08A2C"/>
+    <stop offset="1" stop-color="#96610F"/>
+  </linearGradient>
+  <clipPath id="miolo">
+    <polygon points="60,28 87.7,44 87.7,76 60,92 32.3,76 32.3,44"/>
+  </clipPath>
+</defs>
+
+<!-- ===== SÍMBOLO ================================================== -->
+<g clip-path="url(#miolo)">
+  <path fill="url(#negro)"
+        d="M60 22 C 44 43 79 55 61 72 C 52 81 56 89 60 98 L 28 78 L 28 42 Z"/>
+  <path fill="url(#solimoes)"
+        d="M60 22 C 44 43 79 55 61 72 C 52 81 56 89 60 98 L 92 78 L 92 42 Z"/>
+  <path fill="none" stroke="#F3F6F8" stroke-width="2.1" opacity=".7"
+        stroke-linecap="round"
+        d="M60 22 C 44 43 79 55 61 72 C 52 81 56 89 60 98"/>
+</g>
+<polygon points="60,14 101.6,38 101.6,86 60,110 18.4,86 18.4,38"
+         fill="none" stroke="#FFFFFF" stroke-width="6.5" stroke-linejoin="round"/>
+<g fill="#FFFFFF" stroke="#0E2A47" stroke-width="2.6">
+  <circle cx="60" cy="14" r="7"/>
+  <circle cx="101.6" cy="38" r="7"/>
+  <circle cx="101.6" cy="86" r="7"/>
+  <circle cx="60" cy="110" r="7"/>
+  <circle cx="18.4" cy="86" r="7"/>
+  <circle cx="18.4" cy="38" r="7"/>
+</g>
+
+<!-- ===== NOME ===================================================== -->
+<text x="140" y="58" fill="#FFFFFF"
+      font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+      font-size="50" font-weight="700" letter-spacing="1.5">GAIA</text>
+
+<!-- Fio de separação: repete a espessura do anel em escala reduzida. -->
+<rect x="141" y="68" width="86" height="3.4" rx="1.5" fill="#7FB0E8"/>
+
+<!-- ===== EXPANSÃO DA SIGLA =====================================
+     Em duas linhas e em corpo 20, contra os 13,4 de uma linha só.
+     A sigla não se explica sozinha: se a expansão não for legível,
+     a assinatura vira só quatro letras. -->
+<text x="140" y="90" fill="#DCE9F5"
+      font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+      font-size="20" font-weight="500" letter-spacing=".2"
+  ><tspan fill="#8FC0F0" font-weight="700">G</tspan>eração de derivados e <tspan fill="#8FC0F0" font-weight="700">A</tspan>nálise</text>
+<text x="140" y="115" fill="#DCE9F5"
+      font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif"
+      font-size="20" font-weight="500" letter-spacing=".2"
+  ><tspan fill="#8FC0F0" font-weight="700">I</tspan>nteligente de <tspan fill="#8FC0F0" font-weight="700">A</tspan>tivos Amazônicos</text>
+</svg>

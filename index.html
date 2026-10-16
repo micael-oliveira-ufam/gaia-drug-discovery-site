@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GAIA, plataforma gratuita de descoberta de fármacos para ativos amazônicos</title>
+<meta name="description" content="GAIA (Geração de Derivados e Análise Inteligente de Ativos Amazônicos): plataforma acadêmica gratuita para validação de moléculas, predição ADMET, docking molecular, QSAR, dinâmica molecular, retrossíntese e geração de derivados por IA, com foco em Leishmania e na biodiversidade amazônica. UFAM, Manaus.">
+<meta name="keywords" content="GAIA, descoberta de fármacos, Leishmania, leishmaniose, ADMET, docking molecular, AutoDock Vina, QSAR, retrossíntese, derivados, produtos naturais, Amazônia, UFAM, PPGIF, bioinformática">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0E2A47">
+<link rel="canonical" href="__SITE_URL__/">
+<link rel="alternate" hreflang="pt-BR" href="__SITE_URL__/">
+<link rel="alternate" hreflang="en" href="__SITE_URL__/en/">
+<link rel="alternate" hreflang="x-default" href="__SITE_URL__/">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/gaia.ico" sizes="any">
+<!--GOOGLE_VERIFICACAO-->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GAIA">
+<meta property="og:title" content="GAIA, plataforma gratuita de descoberta de fármacos para ativos amazônicos">
+<meta property="og:description" content="GAIA (Geração de Derivados e Análise Inteligente de Ativos Amazônicos): plataforma acadêmica gratuita para validação de moléculas, predição ADMET, docking molecular, QSAR, dinâmica molecular, retrossíntese e geração de derivados por IA, com foco em Leishmania e na biodiversidade amazônica. UFAM, Manaus.">
+<meta property="og:url" content="__SITE_URL__/">
+<meta property="og:image" content="__SITE_URL__/assets/GAIA_compartilhar.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "__SITE_URL__/#site", "url": "__SITE_URL__/", "name": "GAIA", "inLanguage": ["pt-BR", "en"]}, {"@type": "SoftwareApplication", "@id": "__SITE_URL__/#app", "name": "GAIA", "alternateName": ["Geração de Derivados e Análise Inteligente de Ativos Amazônicos", "Generative Derivatives & Analysis of Amazonian actives"], "applicationCategory": "ScientificApplication", "operatingSystem": "Web, Docker", "url": "https://gaia-platform.online/", "softwareVersion": "3.53.1", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "BRL"}, "description": "GAIA (Geração de Derivados e Análise Inteligente de Ativos Amazônicos): plataforma acadêmica gratuita para validação de moléculas, predição ADMET, docking molecular, QSAR, dinâmica molecular, retrossíntese e geração de derivados por IA, com foco em Leishmania e na biodiversidade amazônica. UFAM, Manaus.", "author": [{"@type": "Person", "name": "Douglas Emanuel Mota de Souza"}], "publisher": {"@type": "Organization", "name": "Universidade Federal do Amazonas (UFAM)", "url": "https://ufam.edu.br/"}}]}</script>
+<style>
+:root{--tinta:#0E2A47;--texto:#1f2d3d;--apagado:#5b6b7b;--fundo:#f4f7fa;--cartao:#ffffff;--traco:#d9e2ec;
+--azul:#1A4B85;--azul2:#2A63A8;--ouro:#C8861D;--r:12px}
+@media (prefers-color-scheme:dark){:root{--texto:#e6edf5;--apagado:#9fb1c3;--fundo:#0c1a2b;--cartao:#12263c;--traco:#25405c;--azul:#5b9bdc;--azul2:#7bb0e8;--tinta:#e6edf5}
+.logo-claro{filter:brightness(0) invert(1)}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--texto);background:var(--fundo)}
+a{color:var(--azul)}a:hover{color:var(--azul2)}
+.cx{max-width:1040px;margin:0 auto;padding:0 20px}
+header.topo{background:var(--cartao);border-bottom:1px solid var(--traco)}
+header.topo .cx{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+header.topo img{height:44px;width:auto;display:block}
+nav a{margin-left:16px;font-size:.92rem;text-decoration:none}
+.hero{padding:56px 0 36px}
+.hero h1{font-size:clamp(2.4rem,6vw,3.6rem);margin:0;color:var(--tinta);letter-spacing:.02em}
+.hero .sub{font-size:1.15rem;color:var(--ouro);font-weight:600;margin:.2em 0 1em}
+.hero p.lead{font-size:1.12rem;max-width:760px}
+.botoes{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0 8px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;background:var(--azul);color:#fff;text-decoration:none;font-weight:600}
+.btn:hover{background:var(--azul2);color:#fff}
+.btn.sec{background:transparent;color:var(--azul);border:1.5px solid var(--azul)}
+.btn.sec:hover{background:var(--azul);color:#fff}
+#estado{font-size:.92rem;color:var(--apagado);margin:6px 0 0}
+#estado::before{content:"";display:inline-block;width:9px;height:9px;border-radius:50%;background:#9aa7b4;margin-right:8px}
+#estado.on::before{background:#2fb344}#estado.off::before{background:#d97706}
+section{padding:34px 0}
+h2{font-size:1.55rem;color:var(--tinta);margin:0 0 14px}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:14px}
+.cartao{background:var(--cartao);border:1px solid var(--traco);border-radius:var(--r);padding:16px 18px}
+.cartao h3{margin:0 0 6px;font-size:1.02rem;color:var(--azul)}.cartao p{margin:0;font-size:.93rem;color:var(--texto)}
+.captura{width:100%;height:auto;border-radius:var(--r);border:1px solid var(--traco);display:block}
+.pessoa{display:flex;gap:14px;align-items:flex-start}
+.pessoa img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none}
+.pessoa .n{font-weight:700}.pessoa .v{font-size:.86rem;color:var(--apagado)}
+.pessoa .l{font-size:.86rem;margin-top:4px}.pessoa .l a{margin-right:10px}
+pre,code{font-family:ui-monospace,Menlo,Consolas,monospace}
+pre{background:var(--cartao);border:1px solid var(--traco);border-radius:10px;padding:14px;overflow:auto;font-size:.85rem}
+code{background:var(--cartao);padding:1px 5px;border-radius:5px;border:1px solid var(--traco)}pre code{border:0;padding:0}
+.lim li{margin:.5em 0}
+.logos{display:flex;gap:26px;flex-wrap:wrap;align-items:center;background:#fff;border:1px solid var(--traco);border-radius:var(--r);padding:18px 22px}
+.logos img{height:56px;width:auto;object-fit:contain}
+.aviso{border-left:4px solid var(--ouro);background:var(--cartao);padding:12px 16px;border-radius:0 10px 10px 0}
+footer{border-top:1px solid var(--traco);padding:24px 0 40px;color:var(--apagado);font-size:.88rem}
+</style>
+</head>
+<body>
+<header class="topo"><div class="cx">
+<a href="__SITE_URL__/"><img class="logo-claro" src="assets/gaia-logo.svg" alt="GAIA" width="183" height="44"></a>
+<nav><a href="#modulos">Módulos</a><a href="#equipe">Equipe</a><a href="#citar">Como citar</a>
+<a href="__SITE_URL__/en/" hreflang="en" lang="en">English</a></nav>
+</div></header>
+<main>
+<div class="hero"><div class="cx">
+<h1>GAIA</h1>
+<p class="sub">Geração de Derivados e Análise Inteligente de Ativos Amazônicos</p>
+<p class="lead">Plataforma acadêmica gratuita de triagem <em>in silico</em>. Uma molécula entra como SMILES e passa por validação, predição farmacocinética e de toxicidade, docking molecular, dinâmica molecular e geração de derivados, com foco em <strong>leishmaniose</strong> e na <strong>biodiversidade amazônica</strong>.</p>
+<div class="botoes">
+<a class="btn" href="https://gaia-platform.online/" rel="noopener">Abrir a plataforma</a>
+<a class="btn sec" href="#citar">Como citar</a>
+</div>
+<p id="estado">Verificando se a plataforma está no ar…</p>
+</div></div>
+
+<section id="oque"><div class="cx"><h2>O que é a GAIA</h2><p>A leishmaniose é um problema sério de saúde pública na Amazônia, e a biodiversidade da região é fonte de moléculas ainda pouco exploradas. A GAIA reúne, numa só tela, as etapas que normalmente exigem várias ferramentas separadas: confere a molécula, prevê o seu perfil ADMET, simula a ligação ao alvo e propõe derivados inéditos a partir dela, conferindo se já existem em bancos públicos (PubChem, ChEMBL, ZINC). Integra a Tese de Doutorado de Douglas Emanuel Mota de Souza no Programa de Pós-Graduação em Inovação Farmacêutica (PPGIF) da Faculdade de Ciências Farmacêuticas da Universidade Federal do Amazonas (UFAM).</p></div></section>
+
+<section id="captura"><div class="cx"><h2>A plataforma</h2>
+<img class="captura" src="assets/captura-inicio-pt.jpg" alt="Tela inicial da plataforma GAIA" width="1280" height="800" loading="lazy">
+</div></section>
+
+<section id="modulos"><div class="cx"><h2>Módulos</h2><div class="grade"><div class="cartao"><h3>Validação</h3><p>Confere o SMILES, calcula descritores e a regra de Lipinski.</p></div><div class="cartao"><h3>ADMET</h3><p>Prediz absorção, distribuição, metabolismo, excreção e toxicidade (ADMET-AI).</p></div><div class="cartao"><h3>QSAR</h3><p>Relaciona descritores farmacocinéticos com a atividade observada, comparando moléculas ativas e inativas do mesmo ensaio.</p></div><div class="cartao"><h3>Docking</h3><p>Prepara ligante e receptor e roda o AutoDock Vina, com detecção automática do sítio.</p></div><div class="cartao"><h3>Re-docking</h3><p>Valida o protocolo: RMSD do ligante co-cristalizado contra a pose de raio-X.</p></div><div class="cartao"><h3>Dinâmica molecular</h3><p>Simula a pose do docking em água explícita (OpenMM) e mede se ela se sustenta.</p></div><div class="cartao"><h3>Derivados</h3><p>Gera derivados por regras, por fragmentos enriquecidos nas ativas e por aprendizado por reforço, preservando a molécula de partida, e confere o ineditismo.</p></div><div class="cartao"><h3>Retrossíntese</h3><p>SAscore, desconexões por regras BRICS e, opcionalmente, rotas por AiZynthFinder ou Spaya, com conferência dos reagentes.</p></div></div></div></section>
+
+<section id="limitacoes"><div class="cx"><h2>Limitações, ditas de antemão</h2><ul class="lim"><li><strong>Predição não é medida.</strong> Tudo o que sai daqui é hipótese computacional. ADMET vem de modelo estatístico; afinidade de docking, de função de escore empírica. Nenhum dos dois substitui ensaio in vitro ou in vivo, e a plataforma não é instrumento de decisão clínica.</li><li><strong>O espaço químico amazônico é pouco representado.</strong> Os modelos foram treinados sobretudo em compostos sintéticos de bibliotecas farmacêuticas. Produtos naturais da biodiversidade amazônica, que são o objeto desta plataforma, ficam com frequência fora dessa distribuição, e a incerteza real é maior do que a que o número aparenta.</li><li><strong>Receptor rígido.</strong> O docking trata a proteína como imóvel. Alvos com sítio flexível ou que mudam de conformação ao ligar pedem dinâmica molecular, que esta plataforma não faz.</li><li><strong>Ineditismo é relativo às bases consultadas.</strong> Um derivado ausente de PubChem, ChEMBL e ZINC pode constar em literatura de patente ou em base não consultada. A resposta é &#x27;não encontrado&#x27;, não &#x27;não existe&#x27;.</li><li><strong>Sem internet, parte disso não roda.</strong> Estrutura do PDB, nomenclatura e verificação de ineditismo dependem de rede. Validação, ADMET e docking com receptor já baixado funcionam offline.</li></ul>
+<p class="aviso"><strong>Aviso.</strong> Tudo o que a GAIA produz é hipótese computacional. Não substitui ensaio in vitro ou in vivo, e a plataforma não é instrumento de decisão clínica.</p></div></section>
+
+<section id="equipe"><div class="cx"><h2>Equipe</h2><div class="grade"><div class="cartao pessoa"><img src="assets/equipe/douglas.jpg" alt="Douglas Emanuel Mota de Souza" width="64" height="64" loading="lazy"><div><div class="n">Douglas Emanuel Mota de Souza</div><div class="v">Autor principal, concepção, desenvolvimento e condução · Doutorando, PPGIF/FCF/UFAM</div><div class="l"><a href="http://lattes.cnpq.br/3675023509327835" rel="noopener" target="_blank">Currículo Lattes</a><a href="https://orcid.org/0009-0001-9409-8701" rel="noopener" target="_blank">ORCID 0009-0001-9409-8701</a></div></div></div><div class="cartao pessoa"><img src="assets/equipe/fernanda.jpg" alt="Profa. Dra. Fernanda Guilhon-Simplicio" width="64" height="64" loading="lazy"><div><div class="n">Profa. Dra. Fernanda Guilhon-Simplicio</div><div class="v">Orientação · PPGIF/FCF/UFAM</div><div class="l"><a href="http://lattes.cnpq.br/8442570850903106" rel="noopener" target="_blank">Currículo Lattes</a><a href="https://orcid.org/0000-0001-9528-746X" rel="noopener" target="_blank">ORCID 0000-0001-9528-746X</a></div></div></div><div class="cartao pessoa"><img src="assets/equipe/micael.jpg" alt="Micael Davi Lima de Oliveira" width="64" height="64" loading="lazy"><div><div class="n">Micael Davi Lima de Oliveira</div><div class="v">Iniciação científica, bioinformática · FCF/UFAM</div><div class="l"><a href="http://lattes.cnpq.br/0954145278059120" rel="noopener" target="_blank">Currículo Lattes</a><a href="https://orcid.org/0000-0002-1832-0542" rel="noopener" target="_blank">ORCID 0000-0002-1832-0542</a></div></div></div><div class="cartao pessoa"><img src="assets/equipe/odoiza.jpg" alt="Odoiza Naftaly Magalhães da Silva Lins" width="64" height="64" loading="lazy"><div><div class="n">Odoiza Naftaly Magalhães da Silva Lins</div><div class="v">Iniciação científica · FCF/UFAM</div><div class="l"><a href="http://lattes.cnpq.br/0628334724229851" rel="noopener" target="_blank">Currículo Lattes</a></div></div></div></div></div></section>
+
+<section id="citar"><div class="cx"><h2>Como citar</h2>
+<p>Souza D.E.M., Oliveira M.D.L., Lins O.N.M.S., Guilhon-Simplicio F. GAIA, Geração de derivados e Análise Inteligente de Ativos Amazônicos: plataforma integrada de triagem virtual. Programa de Pós-Graduação em Inovação Farmacêutica, Universidade Federal do Amazonas, Manaus, Brasil.</p>
+<p><strong>BibTeX</strong></p><pre><code>@misc{gaia,
+  author = {Souza, D. E. M. and Oliveira, M. D. L. and Lins, O. N. M. S. and Guilhon-Simplicio, F.},
+  title  = {{GAIA}: Gera\c{c}\~ao de derivados e An\&#x27;alise Inteligente de Ativos Amaz\^onicos},
+  note   = {Plataforma integrada de triagem virtual. Programa de P\&#x27;os-Gradua\c{c}\~ao em Inova\c{c}\~ao Farmac\^eutica, Universidade Federal do Amazonas},
+  address = {Manaus, Brasil}
+}</code></pre></div></section>
+
+<section id="codigo"><div class="cx"><h2>Código-fonte e acesso</h2><p>O código-fonte da GAIA ainda não é público. A plataforma pode ser usada online, quando o servidor do laboratório estiver ligado, pelo botão no topo desta página. Para colaboração ou dúvidas, entre em contato com os autores pelos currículos Lattes e ORCID listados acima.</p></div></section>
+
+<section id="apoio"><div class="cx"><h2>Instituições e apoio</h2>
+<div class="logos">
+<img src="assets/ufam.png" alt="Universidade Federal do Amazonas" loading="lazy">
+<img src="assets/ppgif.png" alt="PPGIF" loading="lazy">
+<img src="assets/fapeam.png" alt="FAPEAM" loading="lazy">
+<img src="assets/capes.png" alt="CAPES" loading="lazy">
+<img src="assets/governo_brasil.png" alt="Governo do Brasil" loading="lazy">
+</div></div></section>
+</main>
+<footer><div class="cx">Projeto acadêmico da UFAM, Manaus, Amazonas, Brasil. Versão 3.53.1.</div></footer>
+<script>window.__ESTADO__={"url": "https://gaia-platform.online", "on": "A plataforma está no ar agora.", "off": "A plataforma roda em um servidor de laboratório que nem sempre está ligado. Se o botão não abrir, volte mais tarde."};
+
+(function(){var el=document.getElementById('estado');if(!el)return;
+var T=window.__ESTADO__;
+function fim(on){el.className=on?'on':'off';el.textContent=on?T.on:T.off;}
+/* Testa com uma IMAGEM da plataforma, não com fetch: quando o túnel está
+   fora do ar a Cloudflare responde uma página de erro (HTTP 5xx) que um
+   fetch sem CORS trataria como sucesso. Imagem só carrega se for a imagem. */
+var img=new Image(),done=false;
+var t=setTimeout(function(){if(!done){done=true;fim(false)}},7000);
+img.onload=function(){if(!done){done=true;clearTimeout(t);fim(true)}};
+img.onerror=function(){if(!done){done=true;clearTimeout(t);fim(false)}};
+img.src=T.url+'/img/gaia-192.png?t='+Date.now();})();
+</script>
+</body></html>

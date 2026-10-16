@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"
+     width="120" height="120" role="img" aria-label="GAIA">
+<!-- Favicon GAIA. Versão simplificada do símbolo: sem gradiente, sem a
+     linha da confluência, sem halo nos átomos. A 16 px esses detalhes
+     viram ruído; o que resta é o que continua legível. -->
+<clipPath id="m"><polygon points="60,26 88.9,43 88.9,77 60,94 31.1,77 31.1,43"/></clipPath>
+<g clip-path="url(#m)">
+  <path fill="#1D4E89" d="M60 20 C 44 43 79 55 61 72 C 52 81 56 89 60 100 L 26 80 L 26 40 Z"/>
+  <path fill="#A9701A" d="M60 20 C 44 43 79 55 61 72 C 52 81 56 89 60 100 L 94 80 L 94 40 Z"/>
+</g>
+<polygon points="60,14 101.6,38 101.6,86 60,110 18.4,86 18.4,38"
+         fill="none" stroke="#0E2A47" stroke-width="9" stroke-linejoin="round"/>
+<g fill="#0E2A47">
+  <circle cx="60" cy="14" r="8"/><circle cx="101.6" cy="38" r="8"/>
+  <circle cx="101.6" cy="86" r="8"/><circle cx="60" cy="110" r="8"/>
+  <circle cx="18.4" cy="86" r="8"/><circle cx="18.4" cy="38" r="8"/>
+</g>
+</svg>

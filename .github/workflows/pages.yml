@@ -1,0 +1,66 @@
+# Publica este repositório no GitHub Pages.
+# Configuração única: Settings > Pages > Build and deployment > Source: GitHub Actions
+# (o script publicar.sh já faz isso). Variável opcional (Settings > Secrets and
+# variables > Actions > Variables): GOOGLE_SITE_VERIFICATION, o valor do
+# "content" da meta de verificação do Google Search Console.
+name: Site (GitHub Pages)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: pages
+        uses: actions/configure-pages@v5
+      - name: Preparar o site (endereço, robots, sitemap, verificação)
+        env:
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+          VERIFICACAO: ${{ vars.GOOGLE_SITE_VERIFICATION }}
+        run: |
+          set -euo pipefail
+          SITE_URL="${SITE_URL%/}"
+          mkdir _site
+          cp -r index.html 404.html en assets .nojekyll _site/
+          META=""
+          if [[ "${VERIFICACAO:-}" =~ ^[A-Za-z0-9_-]{10,100}$ ]]; then
+            META="<meta name=\"google-site-verification\" content=\"${VERIFICACAO}\">"
+          fi
+          find _site -name '*.html' -print0 | while IFS= read -r -d '' f; do
+            sed -i -e "s|__SITE_URL__|${SITE_URL}|g" -e "s|<!--GOOGLE_VERIFICACAO-->|${META}|g" "$f"
+          done
+          printf 'User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n' "$SITE_URL" > _site/robots.txt
+          HOJE="$(date -u +%F)"
+          cat > _site/sitemap.xml <<XML
+          <?xml version="1.0" encoding="UTF-8"?>
+          <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+            <url><loc>${SITE_URL}/</loc><lastmod>${HOJE}</lastmod>
+              <xhtml:link rel="alternate" hreflang="pt-BR" href="${SITE_URL}/"/>
+              <xhtml:link rel="alternate" hreflang="en" href="${SITE_URL}/en/"/></url>
+            <url><loc>${SITE_URL}/en/</loc><lastmod>${HOJE}</lastmod>
+              <xhtml:link rel="alternate" hreflang="pt-BR" href="${SITE_URL}/"/>
+              <xhtml:link rel="alternate" hreflang="en" href="${SITE_URL}/en/"/></url>
+          </urlset>
+          XML
+          grep -rn "__SITE_URL__" _site && { echo "marcador sem trocar"; exit 1; } || true
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4
